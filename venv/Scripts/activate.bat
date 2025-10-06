@@ -8,7 +8,11 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
+<<<<<<< HEAD
 set VIRTUAL_ENV=D:\chatbotv1\venv
+=======
+set VIRTUAL_ENV=C:\Users\W e l c o m e\Desktop\Chatbot\venv
+>>>>>>> d10c5186e931ca71dcb6a7f891bfc6f6fa302c54
 
 if not defined PROMPT set PROMPT=$P$G
 
