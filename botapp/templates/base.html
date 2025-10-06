@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}">
+    <title>Digital Marketing Expert - Get Instant Quotes & Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/chatbot.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">DigitalPro</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="hero-section">
+            <h1>Digital Marketing Expert</h1>
+            <p>Get instant quotes and explore our amazing portfolio. Connect with our AI assistant for personalized recommendations!</p>
+        </section>
+
+        <div class="content-grid">
+            <div class="content-card">
+                <h3>SEO Services</h3>
+                <p>Boost your online visibility with our comprehensive SEO strategies. We help you rank higher and drive organic traffic to your website.</p>
+            </div>
+            <div class="content-card">
+                <h3>Social Media Marketing</h3>
+                <p>Engage your audience across all platforms. Our social media experts create compelling content that converts followers into customers.</p>
+            </div>
+            <div class="content-card">
+                <h3>PPC Advertising</h3>
+                <p>Maximize your ROI with targeted pay-per-click campaigns. Get instant results and measurable growth for your business.</p>
+            </div>
+            <div class="content-card">
+                <h3>Content Marketing</h3>
+                <p>Tell your brand story with powerful content. We create engaging blogs, videos, and graphics that resonate with your audience.</p>
+            </div>
+            <div class="content-card">
+                <h3>Email Marketing</h3>
+                <p>Build lasting relationships with personalized email campaigns. Turn prospects into loyal customers with our proven strategies.</p>
+            </div>
+            <div class="content-card">
+                <h3>Get Instant Quote</h3>
+                <p>Need a custom quote? Our AI chatbot can provide instant estimates based on your requirements. Click the chat button to get started!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Chatbot Button -->
+    <button class="chatbot-button" onclick="openChatbotModal()" title="Get Instant Quote">
+        <span class="chat-icon">💬</span>
+        <span class="chat-text">Get Quote</span>
+    </button>
+
+    <!-- Chatbot Modal -->
+    <div class="chatbot-modal" id="chatbotModal">
+        <div class="modal-overlay" onclick="closeChatbotModal()"></div>
+        <div class="chatbot-container">
+            <div class="chatbot-header">
+                <h3>Digital Marketing Assistant</h3>
+                <button class="close-btn" onclick="closeChatbotModal()" title="Close Chat">×</button>
+            </div>
+            <div class="chatbot-content" id="chatbotContent">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                    <p>Loading chat...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/chatbot.js' %}"></script>
+</body>
+</html>
